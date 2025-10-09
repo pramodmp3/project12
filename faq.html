@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions (FAQ)</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="faq.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Answers to Your Top Questions</h1>
+        <p>
+          We've compiled the most common inquiries about our platform, products,
+          and services.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Hover over a question to reveal the answer instantly.
+        </p>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1: Analytics -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How does your Analytics product handle large datasets?</h3>
+              <span class="dropdown-icon">&#9660;</span>
+              <!-- Down Arrow -->
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our Analytics platform is built on a scalable, distributed
+                architecture designed to process and analyze petabytes of data
+                in real-time. We utilize high-performance computing clusters to
+                ensure low-latency insights, regardless of volume.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2: CRM -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I integrate the CRM with my existing email provider?</h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, our CRM features seamless integration with all major email
+                services (Gmail, Outlook 365, etc.) via secure API connections,
+                allowing you to sync contacts, track correspondence, and manage
+                leads directly from your inbox.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3: DevOps -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                What is Infrastructure as Code (IaC) and how does DevOps Pro use
+                it?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                IaC is the practice of managing and provisioning infrastructure
+                through code instead of manual processes. DevOps Pro uses
+                technologies like Terraform and Ansible to ensure your
+                environments are consistent, repeatable, and version-controlled,
+                drastically reducing deployment errors.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4: Billing -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What payment methods do you accept for subscriptions?</h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We accept all major credit cards (Visa, Mastercard, Amex),
+                PayPal, and wire transfers for annual enterprise plans. You can
+                update your billing details anytime in your account settings.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5: Support -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do I contact customer support?</h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                You can reach our dedicated support team 24/7 via live chat
+                directly within the app, or by submitting a ticket through the
+                "Contact Us" page on our website. Priority support is available
+                for Pro and Enterprise subscribers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Pro - Powerful Insights</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="analytics.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Hero / Description Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Analytics Pro: Transform Data into Decisions</h1>
+        <p>
+          Stop guessing and start knowing. Our platform provides real-time,
+          actionable insights using cutting-edge machine learning to predict
+          trends and optimize your operations.
+        </p>
+        <a href="#pricing" class="btn-hero">Get Started Today</a>
+      </div>
+    </section>
+
+    <!-- Feature Details Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Core Features</h2>
+        <div class="feature-grid">
+          <!-- Feature Card 1: Real-time Data -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#9889;</div>
+            <!-- Lightning Bolt Icon -->
+            <h3>Real-time Processing</h3>
+            <p>
+              Process millions of data points per second with zero latency. See
+              your metrics update live, always.
+            </p>
+          </div>
+
+          <!-- Feature Card 2: Predictive Modeling -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128200;</div>
+            <!-- Chart Icon -->
+            <h3>AI-Powered Predictions</h3>
+            <p>
+              Leverage proprietary algorithms to forecast future market behavior
+              and customer lifetime value (CLV).
+            </p>
+          </div>
+
+          <!-- Feature Card 3: Custom Dashboards -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128187;</div>
+            <!-- Computer Icon -->
+            <h3>Custom Dashboards</h3>
+            <p>
+              Design and share beautiful, interactive reports tailored to your
+              team's specific KPIs and needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2>Simple, Transparent Pricing</h2>
+        <div class="pricing-grid">
+          <!-- Price Card 1: Basic -->
+          <div class="price-card">
+            <h3>Basic</h3>
+            <div class="price">$49<small>/mo</small></div>
+            <ul>
+              <li><span class="check-icon">&#10003;</span> 1 User Seat</li>
+              <li><span class="check-icon">&#10003;</span> Standard Reports</li>
+              <li><span class="check-icon">&#10003;</span> Email Support</li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Real-time
+                Processing
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Advanced
+                Forecasting
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Choose Basic</a>
+          </div>
+
+          <!-- Price Card 2: Professional (Featured) -->
+          <div class="price-card featured">
+            <h3>Professional</h3>
+            <div class="price">$199<small>/mo</small></div>
+            <ul>
+              <li><span class="check-icon">&#10003;</span> 5 User Seats</li>
+              <li><span class="check-icon">&#10003;</span> Premium Reports</li>
+              <li>
+                <span class="check-icon">&#10003;</span> Dedicated Account
+                Manager
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Real-time Processing
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Full API
+                Access
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-primary">Start 14-Day Trial</a>
+          </div>
+
+          <!-- Price Card 3: Enterprise -->
+          <div class="price-card">
+            <h3>Enterprise</h3>
+            <div class="price">$499<small>/mo</small></div>
+            <ul>
+              <li><span class="check-icon">&#10003;</span> Unlimited Users</li>
+              <li><span class="check-icon">&#10003;</span> Full API Access</li>
+              <li>
+                <span class="check-icon">&#10003;</span> Priority 24/7 Support
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Real-time Processing
+              </li>
+              <li><span class="check-icon">&#10003;</span> Custom ML Models</li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

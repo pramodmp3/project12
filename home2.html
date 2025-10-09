@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY - Innovative SAAS Solutions</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <section id="home" class="hero-section">
+      <div class="glass-background-animation">
+        <div class="glass-square s1"></div>
+        <div class="glass-square s2"></div>
+        <div class="glass-square s3"></div>
+        <div class="glass-square s4"></div>
+        <div class="glass-square s5"></div>
+      </div>
+      <div class="hero-content animate-on-load">
+        <h1>🚀 Scale Your Business with **STACKLY**</h1>
+        <p>The Future of SAAS is Here. Simple, Powerful, Integrated.</p>
+        <a href="./analytics.html" class="cta-btn">Start Free Trial Today</a>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section id="products-section" class="products-section">
+      <h2>Our Core Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <i class="fas fa-chart-line product-icon"></i>
+          <h3>STACKLY Analytics</h3>
+          <p>
+            Real-time data insights and customizable reports for proactive
+            decision making.
+          </p>
+          <a href="./analytics.html">Explore Tool &rarr;</a>
+        </div>
+        <div class="product-card">
+          <i class="fas fa-users product-icon"></i>
+          <h3>STACKLY CRM</h3>
+          <p>
+            Manage customer relationships, track sales, and streamline your
+            workflow.
+          </p>
+          <a href="./crm.html">Explore Tool &rarr;</a>
+        </div>
+        <div class="product-card">
+          <i class="fas fa-code product-icon"></i>
+          <h3>STACKLY DevOps</h3>
+          <p>
+            Automate deployment, testing, and scaling with robust cloud
+            infrastructure.
+          </p>
+          <a href="./devops.html">Explore Tool &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section id="clients-section" class="clients-section">
+      <h2>Trusted by Industry Leaders</h2>
+      <div class="logo-carousel-container client-carousel-container">
+        <div class="logo-carousel client-carousel">
+          <img src="./files/cl1.webp" alt="Client A" />
+          <img src="./files/cl2.webp" alt="Client B" />
+          <img src="./files/cl3.webp" alt="Client C" />
+          <img src="./files/cl4.jpg" alt="Client D" />
+          <img src="./files/cl5.webp" alt="Client E" />
+          <img src="./files/cl6.webp" alt="Client F" />
+          <img src="./files/cl7.webp" alt="Client G" />
+          <img src="./files/cl8.webp" alt="Client H" />
+          <img src="./files/cl9.webp" alt="Client I" />
+          <img src="./files/cl1.webp" alt="Client J" />
+          <img src="./files/cl10.webp" alt="Client A" />
+          <img src="./files/cl3.webp" alt="Client B" />
+          <img src="./files/cl4.jpg" alt="Client C" />
+          <img src="./files/cl5.webp" alt="Client D" />
+          <img src="./files/cl8.webp" alt="Client E" />
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section id="awards-section" class="awards-section">
+      <h2>Our Recognitions</h2>
+      <div class="logo-carousel-container award-carousel-container">
+        <div class="logo-carousel award-carousel">
+          <img src="./files/aw1.jpg" alt="Award 1" />
+          <img src="./files/aw2.jpg" alt="Award 2" />
+          <img src="./files/aw1.jpg" alt="Award 3" />
+          <img src="./files/aw3.jpg" alt="Award 4" />
+          <img src="./files/aw4.jpg" alt="Award 5" />
+          <img src="./files/aw5.jpg" alt="Award 6" />
+          <img src="./files/aw6.jpg" alt="Award 7" />
+          <img src="./files/aw1.jpg" alt="Award 8" />
+          <img src="./files/aw3.jpg" alt="Award 9" />
+          <img src="./files/aw4.jpg" alt="Award 10" />
+          <img src="./files/aw2.jpg" alt="Award 1" />
+          <img src="./files/aw5.jpg" alt="Award 2" />
+          <img src="./files/aw6.jpg" alt="Award 3" />
+          <img src="./files/aw4.jpg" alt="Award 4" />
+          <img src="./files/aw3.jpg" alt="Award 5" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+  <script src="./script.js"></script>
+</html>

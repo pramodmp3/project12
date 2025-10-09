@@ -1,0 +1,288 @@
+/* --- Global Variables and Base Setup (Blueish Theme, Glassmorphism) --- */
+:root {
+  --primary-blue: #007bff; /* Bright Blue */
+  --accent-color: #28a745; /* Vibrant Green for CTA/Highlight */
+  --text-dark: #1e293b; /* Dark Blue/Grey for text */
+  --bg-light: #e0f2f7; /* Very light blue background */
+  --bg-dark: #263238; /* Darker slate for footer - kept for color reference */
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  --glass-blur: 10px;
+
+  --font-family-primary: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+section {
+  padding: 80px 5%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.products-section,
+.clients-section,
+.awards-section {
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+/* --- Section Dividers/Titles --- */
+.section-divider {
+  border: none;
+  border-top: 1px dashed rgba(0, 123, 255, 0.3);
+  margin: 50px 10%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2.8em;
+  margin-bottom: 50px;
+  color: var(--text-dark);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Hero Section (Animation & Button Styles) --- */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* --- Background GIF Corrections --- */
+  background-image: url("./files/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* CRITICAL FIX: Ensures the image covers the entire container, scaling as necessary */
+  background-size: cover;
+  /* ---------------------------------- */
+
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+.glass-background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.glass-square {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  animation: float 20s infinite linear alternate;
+  border-radius: 20px;
+}
+
+/* Hero Animation Keyframes */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.hero-content h1 {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.cta-btn {
+  /* CTA Button Styles */
+  padding: 15px 35px;
+  background: linear-gradient(
+    45deg,
+    var(--accent-color),
+    #4caf50
+  ); /* Green gradient */
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(40, 167, 69, 0.7);
+}
+
+.hero-content.animate-on-load {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  animation: fadeInScaleUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeInScaleUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- Products Section (Design ENHANCED) --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  padding: 35px 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 5px solid var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
+}
+
+.product-card .product-icon {
+  font-size: 3.5em;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  display: block;
+}
+.product-card h3 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.product-card p {
+  color: #5a6268;
+  margin-bottom: 20px;
+}
+.product-card a {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* --- Clients and Awards Sections (Scrolling RESTORED) --- */
+.logo-carousel-container {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-radius: 15px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+.logo-carousel {
+  display: flex;
+  animation: scroll-left 50s linear infinite;
+  white-space: nowrap;
+}
+.logo-carousel:hover {
+  animation-play-state: paused;
+}
+.logo-carousel img {
+  height: 70px;
+  width: auto;
+  margin: 0 40px;
+  opacity: 0.6;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  filter: grayscale(80%);
+  display: inline-block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- Mobile Responsiveness (GENERAL) --- */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh;
+    height: 70vh;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
